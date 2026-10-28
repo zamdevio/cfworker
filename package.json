@@ -1,0 +1,44 @@
+{
+  "name": "@zamdevio/cfworker",
+  "version": "1.0.0",
+  "description": "Download Cloudflare Workers from Wrangler OAuth profiles, strip multipart wrappers, and split esbuild bundles into a file tree.",
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "wrangler",
+    "esbuild",
+    "bundle",
+    "split",
+    "recover"
+  ],
+  "homepage": "https://github.com/zamdevio/cfworker#readme",
+  "bugs": {
+    "url": "https://github.com/zamdevio/cfworker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zamdevio/cfworker.git"
+  },
+  "license": "MIT",
+  "author": "zamdevio",
+  "type": "module",
+  "bin": {
+    "cfworker": "./bin/cfworker.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "cfworker": "node ./bin/cfworker.js",
+    "start": "node ./bin/cfworker.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
