@@ -1,6 +1,6 @@
 {
   "name": "@zamdevio/cfworker",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Download Cloudflare Workers from Wrangler OAuth profiles, strip multipart wrappers, and split esbuild bundles into a file tree.",
   "keywords": [
     "cloudflare",
@@ -27,18 +27,36 @@
   },
   "files": [
     "bin",
-    "lib",
+    "dist",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
-    "cfworker": "node ./bin/cfworker.js",
-    "start": "node ./bin/cfworker.js"
+    "dev": "tsx src/cli/index.ts",
+    "cfworker": "tsx src/cli/index.ts",
+    "start": "tsx src/cli/index.ts",
+    "build": "tsup",
+    "prepublishOnly": "pnpm build",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "lint": "biome check .",
+    "knip": "knip",
+    "deps": "madge --circular --extensions ts --ts-config tsconfig.json src"
   },
   "engines": {
     "node": ">=20"
   },
+  "packageManager": "pnpm@12.15.0",
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
+    "@types/node": "^24.0.0",
+    "knip": "^5.0.0",
+    "madge": "^8.0.0",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
   }
 }
