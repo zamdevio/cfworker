@@ -1,6 +1,6 @@
 # Phase 02 - Auth, Profiles & Accounts
 
-Status: Planned
+Status: Done. Resolution rules are in `maintainer/systems/auth.md`.
 
 ## Goals
 - Robust profile/account detection

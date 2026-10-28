@@ -1,6 +1,6 @@
 # Phase 03 - CLI UX, Speed & JSON Mode
 
-Status: Planned
+Status: Done. Built `--help` is about 0.02s. JSON errors use `{ "ok": false, "error" }`.
 
 ## Goals
 - Faster startup

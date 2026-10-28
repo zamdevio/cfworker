@@ -1,6 +1,6 @@
 # Phase 05 - Split/Unwrap, Cross-platform & Safety
 
-Status: Planned
+Status: Done. Boundary plus Content-Disposition, contained writes, symlink refusal.
 
 ## Goals
 - Harden multipart/split

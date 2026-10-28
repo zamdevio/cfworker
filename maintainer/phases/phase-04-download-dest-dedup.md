@@ -1,6 +1,6 @@
 # Phase 04 - Download Flow, Destination & Dedup
 
-Status: Planned
+Status: Done. TTY prompt, `--out` / `--force`, sha256 plan, temp staging.
 
 ## Goals
 - Smarter destination selection

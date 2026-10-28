@@ -1,6 +1,6 @@
 # Phase 01 - Project Structure & TS Migration
 
-Status: Planned
+Status: Done. `src/`, `tsup`, `tsx`, `pnpm typecheck`, `pnpm build`.
 
 ## Goals
 - Migrate to TypeScript

@@ -1,6 +1,6 @@
 # Phase 00 - Audit & Baseline
 
-Status: Planned
+Status: Done. See `maintainer/notes/audit-baseline.md`.
 
 ## Goals
 - Document current architecture

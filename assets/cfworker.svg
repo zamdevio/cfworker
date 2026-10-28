@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">cfworker logo</title>
+  <desc id="desc">A cloud with a downward arrow, for pulling Cloudflare Worker bundles back down.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#151C2B"/>
+      <stop offset="1" stop-color="#0B101A"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="12" y1="14" x2="52" y2="38" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#31E6F3"/>
+      <stop offset="1" stop-color="#08AFC2"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="26" y1="40" x2="38" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB12B"/>
+      <stop offset="1" stop-color="#FF8500"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#bg)"/>
+  <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="14.25" fill="none" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1.5"/>
+
+  <path d="M20 36.5h24.2c4.6 0 8.3-3.5 8.3-7.8 0-4-3-7.3-7-7.7C44.6 16.2 40.2 13 35 13c-4.4 0-8.2 2.5-10 6.2-1-.5-2.1-.8-3.3-.8-4.2 0-7.6 3.2-7.6 7.2 0 4.2 3.6 7.6 8 7.9H20z" fill="none" stroke="url(#cyan)" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <path d="M32 41.5v8" fill="none" stroke="url(#amber)" stroke-width="3.6" stroke-linecap="round"/>
+  <path d="M26.2 46.2 32 52l5.8-5.8" fill="none" stroke="url(#amber)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

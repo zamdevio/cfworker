@@ -1,6 +1,6 @@
 # Phase 06 - Tooling, QA, Packaging & Release
 
-Status: Planned
+Status: Done except publish. Tests, Biome, knip, madge, CI, and `pnpm pack` are in place. `npm publish` was not run.
 
 ## Goals
 - Code hygiene

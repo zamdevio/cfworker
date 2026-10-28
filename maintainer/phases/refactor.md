@@ -10,13 +10,13 @@ We want to turn `cfworker` into a clean, fast, type-safe CLI that feels like `no
 
 | Phase | Title | Status | Notes |
 |---|---|---|---|
-| 00 | Audit & Baseline | Planned | Inventory current state, measure startup time, map flows |
-| 01 | Project Structure & TS Migration | Planned | Convert to TS, add tsconfig, build tooling (tsup/tsx), paths |
-| 02 | Auth, Profiles & Accounts | Planned | Support wrangler v3/v4, `cfworker login`, env tokens, profile/account resolution |
-| 03 | CLI UX, Speed & JSON Mode | Planned | Lazy imports, faster startup, prompts/tables/colors, unified `--json` |
-| 04 | Download Flow, Destination & Dedup | Planned | Interactive destination picker, path expansion, temp staging, hash comparison vs existing |
-| 05 | Split/Unwrap, Cross-platform & Safety | Planned | Robust multipart/split, path sanitization, cross-platform paths, safer writes |
-| 06 | Tooling, QA, Packaging & Release | Planned | knip, madge, typecheck, lint, tests (if any), npm publish prep |
+| 00 | Audit & Baseline | Done | `maintainer/notes/audit-baseline.md` |
+| 01 | Project Structure & TS Migration | Done | `src/`, tsup, tsx, strict tsc |
+| 02 | Auth, Profiles & Accounts | Done | v3/v4, cfworker login, `--profile env` |
+| 03 | CLI UX, Speed & JSON Mode | Done | lazy commands, tables, `{ ok }` JSON |
+| 04 | Download Flow, Destination & Dedup | Done | prompt, temp stage, sha256 |
+| 05 | Split/Unwrap, Cross-platform & Safety | Done | path checks, symlink refusal, atomic writes |
+| 06 | Tooling, QA, Packaging & Release | Done | tests, biome, knip, madge, CI. Not published |
 
 ## Guiding Principles
 
@@ -29,10 +29,10 @@ We want to turn `cfworker` into a clean, fast, type-safe CLI that feels like `no
 - **Consistent UX**: Match `nodehunter`/`expgov` style (tables, prompts, `--json`)
 - **Type-safe**: Migrate to TS, strict where practical
 
-## Immediate Questions to Decide
+## Decisions
 
-- [ ] Keep ESM only or dual? (lean ESM)
-- [ ] Use `tsup` for build or `tsc`? (lean tsup like modern CLIs)
-- [ ] Prompt library: in-house minimal vs `@clack/prompts`? (match existing style)
-- [ ] Where to store non-token state? (`~/.local/state/cfworker/` vs none)
-- [ ] Default download dir behavior: `./<worker>` vs `./recovered/<worker>` vs ask every time
+- [x] ESM only
+- [x] tsup, with `bundle: false` so command imports stay lazy
+- [x] In-house prompts, tables, and color. No prompt library
+- [x] No extra state directory. Dedup hashes the files in the destination
+- [x] Non-interactive default is `./recovered/<worker>` from the current directory. A TTY without `--out` asks, using that path as the suggestion
